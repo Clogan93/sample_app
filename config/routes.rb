@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get 'pages/help'
 
+  resources :users
+
   match '/signup',	:via => [:get], :to => 'users#new'
 
   match '/contact', :via => [:get], :to => 'pages#contact'
